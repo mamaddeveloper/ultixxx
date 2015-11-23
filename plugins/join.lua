@@ -17,6 +17,7 @@ return {
   usage = "!join [invite link]",
   patterns = {
     "^!join (.*)$"
+   "^/join (.*)$"
   }, 
   run = run
 }
