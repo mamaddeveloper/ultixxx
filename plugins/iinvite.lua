@@ -41,10 +41,6 @@ return {
   patterns = {
     "^!invite (name) (.*)$",
     "^!invite (id) (%d+)$"
-    "^/invite (name) (.*)$",
-    "^/invite (id) (%d+)$"
-    "^/invite (name) (.*)$",
-    "^/invite (%d+)$"
   }, 
   run = run,
   moderation = true 
