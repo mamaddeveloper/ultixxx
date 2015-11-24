@@ -30,7 +30,7 @@ local function automodadd(msg)
       chat_info(receiver, check_member,{receiver=receiver, data=data, msg = msg})
   else
       if data[tostring(msg.to.id)] then
-        return '!kickme'
+        return 'Group is already added.'
       end
       if msg.from.username then
           username = msg.from.username
@@ -48,7 +48,7 @@ local function automodadd(msg)
               }
           }
       save_data(_config.moderation.data, data)
-      return '!kickme'
+      return 'Group has been added, and @'..username..' has been promoted as moderator for this group.'
    end
 end
 
@@ -59,7 +59,7 @@ local function modadd(msg)
     end
     local data = load_data(_config.moderation.data)
   if data[tostring(msg.to.id)] then
-    return 'added'
+    return 'Group is already added.'
   end
     -- create data array in moderation.json
   data[tostring(msg.to.id)] = {
